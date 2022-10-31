@@ -2,13 +2,13 @@ import React from "react";
 import Query from "../Query";
 import { Link } from "react-router-dom";
 
-import CATEGORIES_QUERY from "../../queries/category/categories";
+import MENUS_QUERY from "../../queries/menu/menus";
 
 const Nav = () => {
   return (
     <div>
-      <Query query={CATEGORIES_QUERY} id={null}>
-        {({ data: { categories } }) => {
+      <Query query={MENUS_QUERY} id={null}>
+        {({ data: { menus } }) => {
           return (
             <div>
               <nav className="uk-navbar-container" data-uk-navbar>
@@ -22,14 +22,14 @@ const Nav = () => {
 
                 <div className="uk-navbar-right">
                   <ul className="uk-navbar-nav">
-                    {categories.data.map((category) => {
+                    {menus.data.map((menu) => {
                       return (
-                        <li key={category.attributes.slug}>
+                        <li key={menu.attributes.slug}>
                           <Link
-                            to={`/category/${category.attributes.slug}`}
+                            to={`/category/${menu.attributes.slug}`}
                             className="uk-link-reset"
                           >
-                            {category.attributes.name}
+                            {menu.attributes.name}
                           </Link>
                         </li>
                       );
