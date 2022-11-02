@@ -6,7 +6,7 @@ import Moment from "react-moment";
 
 import ARTICLE_QUERY from "../../queries/article/article";
 
-const Article = () => {
+const ArticleContainer = () => {
   let { slug } = useParams();
 
   return (
@@ -17,7 +17,9 @@ const Article = () => {
             <div>
               <div className="uk-section">
                 <div className="uk-container uk-container-small">
-                  <ReactMarkdown children={articles.data[0].attributes.content} />
+                  <ReactMarkdown
+                    children={articles.data[0].attributes.content}
+                  />
                   <p>
                     <Moment format="MMM Do YYYY">
                       {articles.data[0].attributes.published_at}
@@ -33,4 +35,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default ArticleContainer;
