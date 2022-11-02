@@ -7,6 +7,7 @@ const ARTICLE_QUERY = gql`
         attributes {
           slug
           title
+          content
           category {
             data {
               attributes {

@@ -3,7 +3,7 @@ import Articles from "../../components/Articles";
 import Query from "../../components/Query";
 import ARTICLES_QUERY from "../../queries/article/articles";
 
-const Home = () => {
+const Articles = () => {
   return (
     <div>
       <div className="uk-section">
@@ -19,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Articles;
