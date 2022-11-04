@@ -9,7 +9,7 @@ const Projects = ({ projects }) => {
           <div>
             <div className="uk-card uk-card-muted">
               <div className="uk-card-body">
-                <h2>{project.attributes.name}</h2>
+                <h1>{project.attributes.name}</h1>
                 <p>
                   {project.attributes.description}
                 </p>
