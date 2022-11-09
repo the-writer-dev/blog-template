@@ -1,5 +1,7 @@
 pipeline:
   build:
-    image: debian
+    image: node
     commands:
       - echo "This is the build step"
+      - npm install
+      - npm test
