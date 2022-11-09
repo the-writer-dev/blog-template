@@ -5,3 +5,5 @@ pipeline:
       - echo "This is the build step"
       - npm install
       - npm test
+      - npm build
+branches: [ master, feature/* ]
