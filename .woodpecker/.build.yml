@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: debian
+    image: debian:stable-slim
     commands:
-      - ehco "building"
+      - echo building
       - sleep 5
