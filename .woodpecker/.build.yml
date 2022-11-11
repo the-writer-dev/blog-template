@@ -1,0 +1,6 @@
+pipeline:
+  build:
+    image: debian
+    commands:
+      - ehco "building"
+      - sleep 5

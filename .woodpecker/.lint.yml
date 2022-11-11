@@ -1,0 +1,6 @@
+pipeline:
+  lint:
+    image: debian:stable-slim
+    commands:
+      - echo linting
+      - sleep 5
