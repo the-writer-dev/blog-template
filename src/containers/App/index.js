@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import HomeContainer from "../Home";
 import ArticlesContainer from "../Articles";
 import ArticleContainer from "../Article";
+import CategoriesContainer from "../Categories";
 import ProjectsContainer from "../Projects";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<HomeContainer />} exact />
         <Route path="/articles" element={<ArticlesContainer />} exact />
         <Route path="/article/:slug" element={<ArticleContainer />} exact />
+        <Route path="/category/:slug" element={<CategoriesContainer />} exact />
         <Route path="/projects" element={<ProjectsContainer />} exact />
       </Routes>
     </div>

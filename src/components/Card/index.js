@@ -8,7 +8,7 @@ const Card = ({ article }) => {
     <Link to={`/article/${article.attributes.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-default">
         <div className="uk-card-body">
-          <img class="uk-align-center" src={imageUrl} alt={article.attributes.image.url} height="100" />
+          <img className="uk-align-center" src={imageUrl} alt={article.attributes.image.url} height="100" />
           <p id="category" className="uk-text-uppercase">
             {article.attributes.category.data.attributes.name}
           </p>

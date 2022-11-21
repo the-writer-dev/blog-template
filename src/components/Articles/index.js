@@ -4,17 +4,17 @@ import Card from "../Card";
 const Articles = ({ articles }) => {
   return (
     <div>
-      <div data-uk-grid>
-        <div class="uk-align-center">
+      <div className="data-uk-grid">
+        <div className="uk-align-center">
           {articles.map((article) => {
             return (
-              <div>
+              <>
                 <Card
                   article={article}
                   key={`article__${article.attributes.slug}`}
                 />
-                <hr class="uk-divider-icon"/>
-              </div>
+                <hr className="uk-divider-icon" />
+              </>
             );
           })}
         </div>
