@@ -6,19 +6,18 @@ import HOME_QUERY from "../../queries/home/home";
 import Lottie from "lottie-react";
 import shipAnimation from "./ship.json";
 
-const style = {
+const lottieStyle = {
   height: 300,
-}
+};
 
 const HomeContainer = () => {
-
   return (
     <div>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <Lottie 
+          <Lottie
             animationData={shipAnimation}
-            style={style}
+            style={lottieStyle}
           />
           <Query query={HOME_QUERY}>
             {({ data: { homes } }) => {

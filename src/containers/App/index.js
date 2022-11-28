@@ -17,7 +17,11 @@ function App() {
         <Route path="/home" element={<HomeContainer />} exact />
         <Route path="/articles" element={<ArticlesContainer />} exact />
         <Route path="/article/:slug" element={<ArticleContainer />} exact />
-        <Route path="/category/:slug" element={<CategoriesContainer />} exact />
+        <Route
+          path="/category/:slug"
+          element={<CategoriesContainer />}
+          exact
+        />
         <Route path="/projects" element={<ProjectsContainer />} exact />
       </Routes>
       <Footer />

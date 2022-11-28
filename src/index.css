@@ -1,3 +1,8 @@
+html, body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
 a {
   text-decoration: none;
 }
@@ -22,17 +27,6 @@ h2 {
   line-height: 1.13636;
 }
 
-#banner {
-  margin: 20px;
-  height: 800px;
-}
-
-#editor {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
 .uk-navbar-container {
   background: #fff !important;
   font-family: Staatliches;
@@ -43,8 +37,11 @@ img:hover {
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.footer{
+.footer {
+  height: 15px;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
