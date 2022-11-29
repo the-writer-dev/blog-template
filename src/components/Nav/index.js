@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import config from "./../../config.json";
 
 const menus = ["home", "articles", "projects"];
 
@@ -10,7 +11,7 @@ const Nav = () => {
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li>
-              <Link to="/">Bite the Code</Link>
+              <Link to="/">{config.title}</Link>
             </li>
           </ul>
         </div>

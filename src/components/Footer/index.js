@@ -1,11 +1,12 @@
 import React from "react";
+import config from "./../../config.json";
 
 const currentYear = (new Date().getFullYear());
 const yearTxt = currentYear === 2022 ? "2022" : "2022 - " + currentYear;
 
 const Footer = () => (
   <div className="uk-aligh-container uk-align-center footer">
-    © {yearTxt} Bite The Code, All rights reserved
+    © {yearTxt} {config.title}, All rights reserved
   </div>
 );
 
