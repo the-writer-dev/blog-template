@@ -9,3 +9,4 @@ This is easy blog template you can fork and setup for your site with confiurabil
 
 # Contribution Guide
 Your contribution is welcome! If you have any idea, please submit it to the issue. We can discuss there. 
+Please read the philosophy and project structure before start working on it!
