@@ -5,6 +5,7 @@ import HOME_QUERY from "../../queries/home/home";
 import Footer from "../../components/Footer/";
 import Lottie from "lottie-react";
 import shipAnimation from "./ship.json";
+import { motion } from "framer-motion";
 
 const lottieStyle = {
   height: 300,
@@ -12,7 +13,11 @@ const lottieStyle = {
 
 const HomeContainer = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <Lottie
@@ -31,7 +36,7 @@ const HomeContainer = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
