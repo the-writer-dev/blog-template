@@ -21,7 +21,6 @@ const HomeContainer = () => {
           />
           <Query query={HOME_QUERY}>
             {({ data: { homes } }) => {
-              console.log(homes);
               return (
                 <ReactMarkdown
                   children={homes.data[0].attributes.intro}
