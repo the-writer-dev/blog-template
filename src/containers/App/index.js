@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Nav from "../../components/Nav";
-import Footer from "../../components/Footer/";
 import HomeContainer from "../Home";
 import ArticlesContainer from "../Articles";
 import ArticleContainer from "../Article";
@@ -24,7 +23,6 @@ function App() {
         />
         <Route path="/projects" element={<ProjectsContainer />} exact />
       </Routes>
-      <Footer />
     </div>
   );
 }

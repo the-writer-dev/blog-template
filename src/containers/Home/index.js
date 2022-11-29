@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import Query from "../../components/Query";
 import HOME_QUERY from "../../queries/home/home";
-
+import Footer from "../../components/Footer/";
 import Lottie from "lottie-react";
 import shipAnimation from "./ship.json";
 
@@ -31,6 +31,7 @@ const HomeContainer = () => {
           </Query>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
