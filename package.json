@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "apollo-boost": "^0.4.9",
+    "framer-motion": "^7.6.15",
     "graphql": "^16.6.0",
     "lottie-react": "^2.3.1",
     "moment": "^2.29.4",
