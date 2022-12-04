@@ -4,7 +4,7 @@ This is easy blog template you can fork and setup for your site with confiurabil
 # Features
 - Integration with Strapi
 - Graphql for dynamic content
-- Easy configuration for site name and copy right
+- Easy configuration
 - Smooth transition between pages
 
 # Contribution Guide
