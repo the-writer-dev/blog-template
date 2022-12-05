@@ -33,7 +33,7 @@ const ArticleContainer = () => {
                     />
                     <p>
                       <Moment format="MMM Do YYYY">
-                        {articles.data[0].attributes.published_at}
+                        {articles.data[0].attributes.published}
                       </Moment>
                     </p>
                   </div>
