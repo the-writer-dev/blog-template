@@ -4,15 +4,10 @@ import Categories from "../../components/Categories";
 import Query from "../../components/Query";
 import ARTICLES_QUERY from "../../queries/article/articles";
 import CATEGORIES_QUERY from "../../queries/category/categories";
-import { motion } from "framer-motion";
 
 const ArticlesContainer = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
           <Query query={CATEGORIES_QUERY}>
@@ -21,15 +16,20 @@ const ArticlesContainer = () => {
             }}
           </Query>
         </div>
+
         <div className="uk-container uk-container-small">
           <Query query={ARTICLES_QUERY}>
             {({ data: { articles } }) => {
-              return <Articles articles={articles.data} />;
+              return (
+                <>
+                  <Articles articles={articles.data} />
+                </>
+              );
             }}
           </Query>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
