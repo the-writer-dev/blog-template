@@ -16,7 +16,7 @@ const HomeContainer = () => {
   const [skip, setSkip] = useState(false);
   useEffect(() => {
     console.log(config);
-    if (config.description != "" && config.contact) {
+    if (config.description !== "" && config.contact) {
       setSkip(true);
     }
   }, []);
@@ -37,27 +37,18 @@ const HomeContainer = () => {
     >
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <Lottie
-            animationData={shipAnimation}
-            style={lottieStyle}
-          />
-          {skip
-            ? (
-              <ReactMarkdown
-                children={markdown}
-              />
-            )
-            : (
-              <Query query={HOME_QUERY}>
-                {({ data: { homes } }) => {
-                  return (
-                    <ReactMarkdown
-                      children={homes.data[0].attributes.intro}
-                    />
-                  );
-                }}
-              </Query>
-            )}
+          <Lottie animationData={shipAnimation} style={lottieStyle} />
+          {skip ? (
+            <ReactMarkdown children={markdown} />
+          ) : (
+            <Query query={HOME_QUERY}>
+              {({ data: { homes } }) => {
+                return (
+                  <ReactMarkdown children={homes.data[0].attributes.intro} />
+                );
+              }}
+            </Query>
+          )}
         </div>
       </div>
       <Footer />

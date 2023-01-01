@@ -2,12 +2,16 @@ import React from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 
-const Articles = ({ articles }) => {
+const Articles = ({ searchText, articles }) => {
+  const filteredArticles = articles.filter((article) =>
+    article.attributes.title.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <div>
       <div className="data-uk-grid">
         <div className="uk-align-center">
-          {articles.map((article) => {
+          {filteredArticles.map((article) => {
             return (
               <>
                 <Card
@@ -36,9 +40,7 @@ const Card = ({ article }) => {
             {article.attributes.title}
           </p>
           <p>
-            <Moment format="MMM Do YYYY">
-              {article.attributes.published}
-            </Moment>
+            <Moment format="MMM Do YYYY">{article.attributes.published}</Moment>
           </p>
         </div>
       </div>
