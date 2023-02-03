@@ -2,13 +2,12 @@ import gql from "graphql-tag";
 
 const TESTIMONIALS_QUERY = gql`
   query Testimonials {
-    testimonials(sort: "published:desc") {
+    testimonials {
       data {
         attributes {
           name
           title
           description
-          published
         }
       }
     }

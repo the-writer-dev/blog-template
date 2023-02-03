@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 const Testimonials = ({ testimonials }) => {
   return (
@@ -9,7 +10,7 @@ const Testimonials = ({ testimonials }) => {
             return (
               <>
                 <TestimonialCard
-                  article={testimonial}
+                  testimonial={testimonial}
                   key={`testimonial_${testimonial.attributes.name}`}
                 />
               </>
@@ -21,14 +22,24 @@ const Testimonials = ({ testimonials }) => {
   );
 };
 
+const style = {
+  width: "50vh",
+  backgroundColor: "rgba(24, 69, 89,0.3)",
+  borderRadius: "10px",
+};
+
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="uk-card uk-card-default">
+    <div style={style} className="uk-card-small">
+      <div class="uk-card-header">
+        <h3 class="uk-card-title">{testimonial.attributes.name}</h3>
+        <p className="uk-text">{testimonial.attributes.title}</p>
+      </div>
       <div className="uk-card-body">
-        <p className="uk-text-uppercase">{testimonial.attributes.name}</p>
-        <p className="uk-text-large">{testimonial.attributes.title}</p>
-        <p>{testimonial.attributes.description}</p>
+        <ReactMarkdown children={testimonial.attributes.description} />
       </div>
     </div>
   );
 };
+
+export default Testimonials;

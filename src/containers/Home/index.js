@@ -3,10 +3,12 @@ import ReactMarkdown from "react-markdown";
 import Query from "../../components/Query";
 import HOME_QUERY from "../../queries/home/home";
 import Footer from "../../components/Footer/";
+import Testimonials from "../../components/Testimonials/";
 import Lottie from "lottie-react";
 import shipAnimation from "./ship.json";
 import { motion } from "framer-motion";
 import config from "./../../config.json";
+import TESTIMONIALS_QUERY from "../../queries/testimonial/testimonials.js";
 
 const lottieStyle = {
   height: 300,
@@ -58,6 +60,16 @@ const HomeContainer = () => {
                 }}
               </Query>
             )}
+          <h2>People say I am ..</h2>
+          <Query query={TESTIMONIALS_QUERY}>
+            {({ data: { testimonials } }) => {
+              return (
+                <>
+                  <Testimonials testimonials={testimonials.data} />
+                </>
+              );
+            }}
+          </Query>
         </div>
       </div>
 
