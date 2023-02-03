@@ -60,6 +60,7 @@ const HomeContainer = () => {
             )}
         </div>
       </div>
+
       <Footer />
     </motion.div>
   );
