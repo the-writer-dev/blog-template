@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const style = {
   padding: "5px",
   margin: "2px",
-  backgroundColor: "#FFDAD2",
+  backgroundColor: "rgba(249, 115, 22, 0.3)",
   textDecoration: "none",
   borderRadius: "5px",
   display: "inline-block",
