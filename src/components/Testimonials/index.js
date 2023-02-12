@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import Collapsible from "react-collapsible";
 
 const Testimonials = ({ testimonials }) => {
   return (
@@ -27,14 +28,19 @@ const style = {
 };
 
 const TestimonialCard = ({ testimonial }) => {
+  console.log(testimonial);
   return (
     <div style={style} className="uk-card-small">
       <div class="uk-card-header">
         <h3 class="uk-card-title">{testimonial.attributes.name}</h3>
         <p className="uk-text">{testimonial.attributes.title}</p>
       </div>
-      <div className="uk-card-body">
-        <ReactMarkdown children={testimonial.attributes.description} />
+      <div class="uk-card-body">
+        <ReactMarkdown children={testimonial.attributes.preview} />
+        <Collapsible trigger="Read More..." triggerWhenOpen="Read Less...">
+          <br />
+          <ReactMarkdown children={testimonial.attributes.description} />
+        </Collapsible>
       </div>
     </div>
   );

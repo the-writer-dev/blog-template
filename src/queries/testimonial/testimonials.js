@@ -7,6 +7,7 @@ const TESTIMONIALS_QUERY = gql`
         attributes {
           name
           title
+          preview
           description
         }
       }
