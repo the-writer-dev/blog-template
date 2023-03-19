@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import ARTICLE_QUERY from "../../queries/article/article";
 import { motion } from "framer-motion";
+import Comments from "../../components/Comments";
 
 const ArticleContainer = () => {
   let { slug } = useParams();
@@ -38,6 +39,7 @@ const ArticleContainer = () => {
                     </p>
                   </div>
                 </div>
+                <Comments />
               </div>
             );
           }
