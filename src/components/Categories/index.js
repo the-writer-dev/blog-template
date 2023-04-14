@@ -13,7 +13,7 @@ const Categories = ({ categories }) => {
   return (
     <div>
       <div className="data-uk-grid">
-        <h2>Tags</h2>
+        <h2>Categories</h2>
         <div className="uk-flex uk-flex-center uk-flex-column uk-flex-item-auto">
           {categories.map((category) => {
             return (

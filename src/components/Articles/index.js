@@ -27,7 +27,7 @@ const Articles = ({ articles }) => {
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.attributes.slug}`} className="uk-link-reset">
-      <div className="uk-card uk-card-default">
+      <div className="uk-card uk-card-default uk-box-shadow-medium">
         <div className="uk-card-body">
           <p id="category" className="uk-text-uppercase">
             {article.attributes.category.data.attributes.name}

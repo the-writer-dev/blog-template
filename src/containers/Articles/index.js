@@ -9,7 +9,7 @@ const ArticlesContainer = () => {
   return (
     <div>
       <div className="uk-section">
-        <div className="uk-container uk-container-small">
+        <div className="uk-container uk-container-small uk-padding">
           <Query query={CATEGORIES_QUERY}>
             {({ data: { categories } }) => {
               return <Categories categories={categories.data} />;
